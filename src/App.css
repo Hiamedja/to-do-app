@@ -5,14 +5,12 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   height: 100vh;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
   margin-bottom: 20px;
   margin-left: 30%;
 }
@@ -29,7 +27,7 @@ body {
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 20px; /* Adjust icon size */
+  font-size: 20px;
 }
 
 .theme-toggle:hover {
@@ -92,8 +90,6 @@ li {
   align-items: center;
   justify-content: space-between;
   padding: 6px;
-  /* border: 2px solid #ffffff40; */
-  /* border: 1px solid #cccccc; */
   border-radius: 10px;
   margin-bottom: 10px;
   background-color: #8f5a4e80;
@@ -109,12 +105,7 @@ li span {
 }
 
 li button {
-  /* background-color: #FFFBE9;
-  color: white;
-  border: none;
-  border-radius: 5px; */
   padding: 5px 5px;
-
   cursor: pointer;
 }
 
@@ -134,7 +125,7 @@ li button:hover {
   border-radius: 10px;
   cursor: pointer;
   margin-bottom: 20px;
-  font-size: 20px; /* Adjust icon size */
+  font-size: 20px;
 }
 
 .theme-toggle:hover {
@@ -142,8 +133,6 @@ li button:hover {
 }
 
 
-
-/* Dark Theme */
 .todo-container.dark {
   background: #333333;
   color: #ffffff;
@@ -198,7 +187,7 @@ body.dark {
 .filter-buttons {
   display: flex;
   justify-content: center;
-  gap: 10px; /* Space between buttons */
+  gap: 10px;
   margin: 20px 0;
 }
 
@@ -216,79 +205,78 @@ body.dark {
 
 .filter-buttons button:hover {
   background-color: #FFFBE9;
-  transform: scale(1.05); /* Slightly enlarge on hover */
+  transform: scale(1.05);
 }
 
 .filter-buttons button:active {
   background-color: #AD8B73;
-  transform: scale(0.95); /* Slightly shrink on click */
+  transform: scale(0.95); 
 }
 
 .filter-buttons button.active {
-  background-color: #AD8B73; /* Highlight active filter */
+  background-color: #AD8B73;
   color: #FFF;
 }
 
 
-/* Media Query for Mobile Screens */
 @media (max-width: 768px) {
   .todo-container {
-    width: 90%; /* Adjust the width to fit smaller screens */
-    padding: 15px 20px; /* Reduce padding for smaller screens */
-    top: 40%; /* Adjust vertical alignment */
+    width: 90%; 
+    padding: 15px 20px; 
+    top: 40%; 
     transform: translateY(-40%);
   }
 
   .header {
-    flex-direction: column; /* Stack the title and theme toggle button */
-    align-items: center; /* Center align the items */
-    margin-left: 0; /* Remove left margin */
+    flex-direction: column; 
+    align-items: center; 
+    margin-left: 0; 
   }
 
   .header h2 {
-    font-size: 20px; /* Reduce font size for smaller screens */
-    margin-bottom: 10px; /* Add spacing between title and button */
+    font-size: 20px;
+    margin-bottom: 10px; 
   }
 
   .theme-toggle {
-    font-size: 18px; /* Adjust icon size */
-    padding: 8px 12px; /* Reduce padding */
+    font-size: 18px; 
+    padding: 8px 12px; 
   }
 
   .filter-buttons {
-    flex-direction: column; /* Stack the filter buttons vertically */
-    gap: 5px; /* Reduce spacing between buttons */
+    flex-direction: column; 
+    gap: 5px; 
   }
 
   .filter-buttons button {
-    font-size: 14px; /* Reduce font size */
-    padding: 8px 10px; /* Adjust padding */
+    font-size: 14px;
+    padding: 8px 10px;
   }
 
   input[type="text"] {
-    font-size: 14px; /* Reduce font size */
-    padding: 8px; /* Adjust padding */
+    font-size: 14px;
+    padding: 8px; 
   }
 
   button {
-    font-size: 14px; /* Reduce font size */
-    padding: 8px 10px; /* Adjust padding */
+    font-size: 14px; 
+    padding: 8px 10px;
   }
 
   ul {
-    margin-top: 10px; /* Reduce margin above the task list */
+    margin-top: 10px;
   }
 
   li {
-    padding: 5px; /* Adjust padding for list items */
+    padding: 5px;
   }
 
   li span {
-    font-size: 14px; /* Reduce font size for task text */
+    font-size: 14px;
   }
 
   li button {
-    font-size: 12px; /* Reduce font size for delete button */
-    padding: 5px 8px; /* Adjust padding */
+    font-size: 12px;
+    padding: 5px 8px;
   }
 }
