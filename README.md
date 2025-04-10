@@ -50,7 +50,7 @@ You can filter tasks by their status (All, Active, or Completed) using filter bu
 
 🛠️ Installation
 Clone this repository to your local machine:
-git clone https://github.com/hiamedja/todo-list-app.git
+git clone https://github.com/Hiamedja/todo-list-app.git
 Navigate to the project directory:
 
 cd todo-list-app
