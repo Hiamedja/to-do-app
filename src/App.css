@@ -1,0 +1,294 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #E3CAA5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  margin-bottom: 20px;
+  margin-left: 30%;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.theme-toggle {
+  background-color: #E3CAA5;
+  color: #000;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px; /* Adjust icon size */
+}
+
+.theme-toggle:hover {
+  background-color: #FFFBE9;
+}
+
+.todo-container {
+  background: #AD8B73;
+  padding: 20px 30px;
+  border-radius: 20px;
+  box-shadow: 6px 10px #CEAB93;;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+h2 {
+  color: #000000;
+  margin-bottom: 20px;
+  font-family: cursive;
+}
+
+input[type="text"] {
+  width: calc(100% - 50px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #9d010142;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: cursive
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #E3CAA5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: cursive;
+}
+
+button:hover {
+  background-color: #FFFBE9;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px;
+  /* border: 2px solid #ffffff40; */
+  /* border: 1px solid #cccccc; */
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: #8f5a4e80;
+}
+
+li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+li span {
+  flex-grow: 1;
+  text-align: left;
+}
+
+li button {
+  /* background-color: #FFFBE9;
+  color: white;
+  border: none;
+  border-radius: 5px; */
+  padding: 5px 5px;
+
+  cursor: pointer;
+}
+
+li button:hover {
+  background-color: #FFFBE9;
+}
+
+
+
+
+
+.theme-toggle {
+  background-color: #E3CAA5;
+  color: #000;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 20px; /* Adjust icon size */
+}
+
+.theme-toggle:hover {
+  background-color: #FFFBE9;
+}
+
+
+
+/* Dark Theme */
+.todo-container.dark {
+  background: #333333;
+  color: #ffffff;
+  box-shadow: 6px 10px #555555;
+}
+
+body.dark {
+  background-color: #121212;
+}
+
+
+.todo-container.dark input[type="text"] {
+  background-color: #444444;
+  color: #ffffff;
+  border: 2px solid #555555;
+}
+
+.todo-container.dark button {
+  background-color: #555555;
+  color: #ffffff;
+}
+
+.todo-container.dark h2 {
+  color: #ffffff;
+}
+
+.todo-container.dark input[type="text"]::placeholder {
+  color: #aaaaaa;
+}
+
+
+.todo-container.dark button:hover {
+  background-color: #777777;
+}
+
+.todo-container.dark ul li {
+  background-color: #444444;
+  color: #ffffff;
+}
+
+.todo-container.dark ul li button {
+  background-color: #555555;
+  color: #ffffff;
+}
+
+
+.todo-container.dark ul li button:hover {
+  background-color: #777777;
+}
+
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between buttons */
+  margin: 20px 0;
+}
+
+.filter-buttons button {
+  padding: 10px 15px;
+  background-color: #E3CAA5;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: cursive;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-buttons button:hover {
+  background-color: #FFFBE9;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.filter-buttons button:active {
+  background-color: #AD8B73;
+  transform: scale(0.95); /* Slightly shrink on click */
+}
+
+.filter-buttons button.active {
+  background-color: #AD8B73; /* Highlight active filter */
+  color: #FFF;
+}
+
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+  .todo-container {
+    width: 90%; /* Adjust the width to fit smaller screens */
+    padding: 15px 20px; /* Reduce padding for smaller screens */
+    top: 40%; /* Adjust vertical alignment */
+    transform: translateY(-40%);
+  }
+
+  .header {
+    flex-direction: column; /* Stack the title and theme toggle button */
+    align-items: center; /* Center align the items */
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .header h2 {
+    font-size: 20px; /* Reduce font size for smaller screens */
+    margin-bottom: 10px; /* Add spacing between title and button */
+  }
+
+  .theme-toggle {
+    font-size: 18px; /* Adjust icon size */
+    padding: 8px 12px; /* Reduce padding */
+  }
+
+  .filter-buttons {
+    flex-direction: column; /* Stack the filter buttons vertically */
+    gap: 5px; /* Reduce spacing between buttons */
+  }
+
+  .filter-buttons button {
+    font-size: 14px; /* Reduce font size */
+    padding: 8px 10px; /* Adjust padding */
+  }
+
+  input[type="text"] {
+    font-size: 14px; /* Reduce font size */
+    padding: 8px; /* Adjust padding */
+  }
+
+  button {
+    font-size: 14px; /* Reduce font size */
+    padding: 8px 10px; /* Adjust padding */
+  }
+
+  ul {
+    margin-top: 10px; /* Reduce margin above the task list */
+  }
+
+  li {
+    padding: 5px; /* Adjust padding for list items */
+  }
+
+  li span {
+    font-size: 14px; /* Reduce font size for task text */
+  }
+
+  li button {
+    font-size: 12px; /* Reduce font size for delete button */
+    padding: 5px 8px; /* Adjust padding */
+  }
+}
